@@ -6,8 +6,9 @@ import torch.optim as optim
 import torch.nn as nn
 import os
 import sys
+from focal_loss import FocalLoss
+
 if len(sys.argv)==2 and (sys.argv[1]=='true' or sys.argv[1]=='false'):
-    
     save_dir='model_parameters'
     epoch=50
     batch_size=64
@@ -20,6 +21,7 @@ if len(sys.argv)==2 and (sys.argv[1]=='true' or sys.argv[1]=='false'):
     model=ANN().to(device)
     optimizer=optim.Adam(model.parameters(),lr)
     criteron=nn.CrossEntropyLoss()
+    # criteron=FocalLoss(gamma=2)
     os.makedirs(save_dir,exist_ok=True)
 
     train_dataset = torchvision.datasets.MNIST(root='./data', 
@@ -48,7 +50,8 @@ if len(sys.argv)==2 and (sys.argv[1]=='true' or sys.argv[1]=='false'):
             prediction=model(image)
             loss=criteron(prediction,label)
             epoch_loss+=loss
-            print(f'epoch:{i}/{epoch} iteration:{iter}/{len(train_dataset)//batch_size+1} batch loss is :{loss:.4f}')
+            if iter%10==0:
+                print(f'epoch:{i}/{epoch} iteration:{iter}/{len(train_dataset)//batch_size+1} batch loss is :{loss:.4f}')
             loss.backward()
             optimizer.step()
             optimizer.zero_grad()

@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 batch_size=64
-model_path='model_parameters/epoch49_val_0.29388487339019775_train_0.2515605390071869'
+model_path='model_parameters/epoch2_val_0.10381928086280823_train_0.09713428467512131'
 test_dataset = torchvision.datasets.MNIST(root='./data', 
                                             train=False, 
                                             transform=transforms.ToTensor())
