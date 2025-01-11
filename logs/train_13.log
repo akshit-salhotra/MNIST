@@ -1,0 +1,51 @@
+2025-01-08 14:23:33 - INFO - ------------------------------------------------------------------------------------------------
+2025-01-08 14:23:33 - INFO - starting new training !!!!
+2025-01-08 14:23:33 - INFO - ------------------------------------------------------------------------------------------------
+2025-01-08 14:23:33 - INFO - Namespace(lr=0.0001, batch=32, epoch=50, data_dir='/home/akshit/Desktop/workspace/python/MNIST/data', save_dir='model_parameter_VAE', kl_weight=0.0, save_freq=2, log_dir='logs', gamma=0.1, step_size=2)
+2025-01-08 14:23:33 - INFO - parameters are being saved at :model_parameter_VAE/13
+2025-01-08 14:23:33 - INFO - VAE_conv(
+  (encoder): Sequential(
+    (0): Sequential(
+      (0): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+      (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (1): Sequential(
+      (0): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+      (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (2): Sequential(
+      (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+    )
+    (3): Sequential(
+      (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+    )
+  )
+  (mu): Linear(in_features=3136, out_features=128, bias=True)
+  (log_var): Linear(in_features=3136, out_features=128, bias=True)
+  (project_back): Linear(in_features=128, out_features=3136, bias=True)
+  (decoder): Sequential(
+    (0): Sequential(
+      (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+    )
+    (1): Sequential(
+      (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+    )
+    (2): Sequential(
+      (0): Sequential(
+        (0): ConvTranspose2d(64, 32, kernel_size=(2, 2), stride=(2, 2))
+        (1): LeakyReLU(negative_slope=0.01)
+      )
+    )
+    (3): Sequential(
+      (0): ConvTranspose2d(32, 1, kernel_size=(2, 2), stride=(2, 2))
+      (1): Sigmoid()
+    )
+  )
+)
+2025-01-08 14:23:34 - INFO - epoch:0/50 iteration:0/1876 batch loss is :17844.6758

@@ -1,0 +1,212 @@
+2025-01-09 14:10:38 - INFO - ------------------------------------------------------------------------------------------------
+2025-01-09 14:10:38 - INFO - starting new training !!!!
+2025-01-09 14:10:38 - INFO - ------------------------------------------------------------------------------------------------
+2025-01-09 14:10:38 - INFO - Namespace(lr=0.0001, batch=32, epoch=50, data_dir='/home/akshit/Desktop/workspace/python/MNIST/data', save_dir='model_parameter_VAE', kl_weight=0.0, save_freq=2, log_dir='logs', gamma=0.1, step_size=2, model_path=None)
+2025-01-09 14:10:38 - INFO - parameters are being saved at :model_parameter_VAE/24
+2025-01-09 14:10:38 - INFO - VAE_conv(
+  (encoder): Sequential(
+    (0): Sequential(
+      (0): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+      (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (1): Sequential(
+      (0): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+      (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (2): Sequential(
+      (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+    )
+    (3): Sequential(
+      (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+    )
+  )
+  (mu): Linear(in_features=3136, out_features=64, bias=True)
+  (log_var): Linear(in_features=3136, out_features=64, bias=True)
+  (project_back): Linear(in_features=64, out_features=3136, bias=True)
+  (decoder): Sequential(
+    (0): Sequential(
+      (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+    )
+    (1): Sequential(
+      (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+    )
+    (2): Sequential(
+      (0): Sequential(
+        (0): ConvTranspose2d(64, 32, kernel_size=(2, 2), stride=(2, 2))
+        (1): LeakyReLU(negative_slope=0.01)
+      )
+    )
+    (3): Sequential(
+      (0): ConvTranspose2d(32, 1, kernel_size=(2, 2), stride=(2, 2))
+      (1): Sigmoid()
+    )
+  )
+)
+2025-01-09 14:10:38 - INFO - epoch:0/50 iteration:0/1876 batch loss is :6937.5493
+2025-01-09 14:10:40 - INFO - epoch:0/50 iteration:50/1876 batch loss is :7204.9351
+2025-01-09 14:10:41 - INFO - epoch:0/50 iteration:100/1876 batch loss is :6993.3330
+2025-01-09 14:10:43 - INFO - epoch:0/50 iteration:150/1876 batch loss is :7208.4541
+2025-01-09 14:10:45 - INFO - epoch:0/50 iteration:200/1876 batch loss is :6781.0918
+2025-01-09 14:10:47 - INFO - epoch:0/50 iteration:250/1876 batch loss is :6650.6523
+2025-01-09 14:10:48 - INFO - epoch:0/50 iteration:300/1876 batch loss is :7025.6445
+2025-01-09 14:10:50 - INFO - epoch:0/50 iteration:350/1876 batch loss is :7971.6558
+2025-01-09 14:10:52 - INFO - epoch:0/50 iteration:400/1876 batch loss is :6678.8496
+2025-01-09 14:10:54 - INFO - epoch:0/50 iteration:450/1876 batch loss is :7229.5688
+2025-01-09 14:10:55 - INFO - epoch:0/50 iteration:500/1876 batch loss is :7746.2500
+2025-01-09 14:10:57 - INFO - epoch:0/50 iteration:550/1876 batch loss is :7310.9326
+2025-01-09 14:10:59 - INFO - epoch:0/50 iteration:600/1876 batch loss is :8018.6567
+2025-01-09 14:11:00 - INFO - epoch:0/50 iteration:650/1876 batch loss is :6696.4771
+2025-01-09 14:11:02 - INFO - epoch:0/50 iteration:700/1876 batch loss is :7081.4336
+2025-01-09 14:11:04 - INFO - epoch:0/50 iteration:750/1876 batch loss is :6803.3525
+2025-01-09 14:11:06 - INFO - epoch:0/50 iteration:800/1876 batch loss is :7002.5308
+2025-01-09 14:11:07 - INFO - epoch:0/50 iteration:850/1876 batch loss is :6919.7314
+2025-01-09 14:11:09 - INFO - epoch:0/50 iteration:900/1876 batch loss is :6940.0952
+2025-01-09 14:11:11 - INFO - epoch:0/50 iteration:950/1876 batch loss is :5999.0122
+2025-01-09 14:11:12 - INFO - epoch:0/50 iteration:1000/1876 batch loss is :6832.7202
+2025-01-09 14:11:14 - INFO - epoch:0/50 iteration:1050/1876 batch loss is :6886.0508
+2025-01-09 14:11:16 - INFO - epoch:0/50 iteration:1100/1876 batch loss is :7561.5640
+2025-01-09 14:11:17 - INFO - epoch:0/50 iteration:1150/1876 batch loss is :7462.7964
+2025-01-09 14:11:19 - INFO - epoch:0/50 iteration:1200/1876 batch loss is :6554.9966
+2025-01-09 14:11:21 - INFO - epoch:0/50 iteration:1250/1876 batch loss is :6846.7358
+2025-01-09 14:11:22 - INFO - epoch:0/50 iteration:1300/1876 batch loss is :7599.6924
+2025-01-09 14:11:24 - INFO - epoch:0/50 iteration:1350/1876 batch loss is :5740.0493
+2025-01-09 14:11:25 - INFO - epoch:0/50 iteration:1400/1876 batch loss is :6360.5723
+2025-01-09 14:11:27 - INFO - epoch:0/50 iteration:1450/1876 batch loss is :6957.4600
+2025-01-09 14:11:29 - INFO - epoch:0/50 iteration:1500/1876 batch loss is :7307.7749
+2025-01-09 14:11:30 - INFO - epoch:0/50 iteration:1550/1876 batch loss is :8158.8311
+2025-01-09 14:11:32 - INFO - epoch:0/50 iteration:1600/1876 batch loss is :6776.9790
+2025-01-09 14:11:33 - INFO - epoch:0/50 iteration:1650/1876 batch loss is :6949.9565
+2025-01-09 14:11:35 - INFO - epoch:0/50 iteration:1700/1876 batch loss is :7750.6963
+2025-01-09 14:11:37 - INFO - epoch:0/50 iteration:1750/1876 batch loss is :7994.2290
+2025-01-09 14:11:38 - INFO - epoch:0/50 iteration:1800/1876 batch loss is :6720.0376
+2025-01-09 14:11:40 - INFO - epoch:0/50 iteration:1850/1876 batch loss is :7848.3662
+2025-01-09 14:11:41 - INFO - Epoch:0/50 Loss is :7213.7017
+2025-01-09 14:11:41 - INFO - average reconstruction loss is :7213.7017
+2025-01-09 14:11:41 - INFO - average kl divergence is : 0.0000
+2025-01-09 14:11:45 - INFO - VAL loss :7346.5190
+2025-01-09 14:11:45 - INFO - epoch:1/50 iteration:0/1876 batch loss is :7081.3633
+2025-01-09 14:11:47 - INFO - epoch:1/50 iteration:50/1876 batch loss is :6297.0508
+2025-01-09 14:11:48 - INFO - epoch:1/50 iteration:100/1876 batch loss is :7238.9766
+2025-01-09 14:11:49 - INFO - epoch:1/50 iteration:150/1876 batch loss is :7475.9976
+2025-01-09 14:11:50 - INFO - epoch:1/50 iteration:200/1876 batch loss is :7919.6899
+2025-01-09 14:11:51 - INFO - epoch:1/50 iteration:250/1876 batch loss is :7425.8169
+2025-01-09 14:11:53 - INFO - epoch:1/50 iteration:300/1876 batch loss is :7088.7690
+2025-01-09 14:11:54 - INFO - epoch:1/50 iteration:350/1876 batch loss is :7451.2793
+2025-01-09 14:11:55 - INFO - epoch:1/50 iteration:400/1876 batch loss is :7034.5859
+2025-01-09 14:11:56 - INFO - epoch:1/50 iteration:450/1876 batch loss is :7765.3984
+2025-01-09 14:11:58 - INFO - epoch:1/50 iteration:500/1876 batch loss is :7496.7974
+2025-01-09 14:11:59 - INFO - epoch:1/50 iteration:550/1876 batch loss is :7010.5181
+2025-01-09 14:12:00 - INFO - epoch:1/50 iteration:600/1876 batch loss is :7138.8872
+2025-01-09 14:12:02 - INFO - epoch:1/50 iteration:650/1876 batch loss is :7941.9648
+2025-01-09 14:12:03 - INFO - epoch:1/50 iteration:700/1876 batch loss is :6196.5015
+2025-01-09 14:12:04 - INFO - epoch:1/50 iteration:750/1876 batch loss is :7061.2339
+2025-01-09 14:12:06 - INFO - epoch:1/50 iteration:800/1876 batch loss is :7854.0308
+2025-01-09 14:12:07 - INFO - epoch:1/50 iteration:850/1876 batch loss is :6901.5347
+2025-01-09 14:12:08 - INFO - epoch:1/50 iteration:900/1876 batch loss is :6738.6797
+2025-01-09 14:12:09 - INFO - epoch:1/50 iteration:950/1876 batch loss is :7517.8423
+2025-01-09 14:12:11 - INFO - epoch:1/50 iteration:1000/1876 batch loss is :6144.8047
+2025-01-09 14:12:12 - INFO - epoch:1/50 iteration:1050/1876 batch loss is :7414.0850
+2025-01-09 14:12:13 - INFO - epoch:1/50 iteration:1100/1876 batch loss is :6959.8159
+2025-01-09 14:12:15 - INFO - epoch:1/50 iteration:1150/1876 batch loss is :7065.4023
+2025-01-09 14:12:16 - INFO - epoch:1/50 iteration:1200/1876 batch loss is :7566.3516
+2025-01-09 14:12:18 - INFO - epoch:1/50 iteration:1250/1876 batch loss is :6735.7314
+2025-01-09 14:12:19 - INFO - epoch:1/50 iteration:1300/1876 batch loss is :7639.1040
+2025-01-09 14:12:21 - INFO - epoch:1/50 iteration:1350/1876 batch loss is :7342.4233
+2025-01-09 14:12:22 - INFO - epoch:1/50 iteration:1400/1876 batch loss is :7164.1982
+2025-01-09 14:12:24 - INFO - epoch:1/50 iteration:1450/1876 batch loss is :7709.4062
+2025-01-09 14:12:25 - INFO - epoch:1/50 iteration:1500/1876 batch loss is :7680.5913
+2025-01-09 14:12:27 - INFO - epoch:1/50 iteration:1550/1876 batch loss is :7194.2559
+2025-01-09 14:12:28 - INFO - epoch:1/50 iteration:1600/1876 batch loss is :6594.8809
+2025-01-09 14:12:30 - INFO - epoch:1/50 iteration:1650/1876 batch loss is :7556.6123
+2025-01-09 14:12:31 - INFO - epoch:1/50 iteration:1700/1876 batch loss is :7364.9194
+2025-01-09 14:12:33 - INFO - epoch:1/50 iteration:1750/1876 batch loss is :7259.7041
+2025-01-09 14:12:34 - INFO - epoch:1/50 iteration:1800/1876 batch loss is :7199.8394
+2025-01-09 14:12:36 - INFO - epoch:1/50 iteration:1850/1876 batch loss is :7190.9600
+2025-01-09 14:12:37 - INFO - Epoch:1/50 Loss is :7212.9985
+2025-01-09 14:12:37 - INFO - average reconstruction loss is :7212.9985
+2025-01-09 14:12:37 - INFO - average kl divergence is : 0.0000
+2025-01-09 14:12:37 - INFO - epoch:2/50 iteration:0/1876 batch loss is :7655.4165
+2025-01-09 14:12:38 - INFO - epoch:2/50 iteration:50/1876 batch loss is :6485.2559
+2025-01-09 14:12:40 - INFO - epoch:2/50 iteration:100/1876 batch loss is :6865.4819
+2025-01-09 14:12:42 - INFO - epoch:2/50 iteration:150/1876 batch loss is :6988.7231
+2025-01-09 14:12:43 - INFO - epoch:2/50 iteration:200/1876 batch loss is :6875.4258
+2025-01-09 14:12:45 - INFO - epoch:2/50 iteration:250/1876 batch loss is :7131.6250
+2025-01-09 14:12:47 - INFO - epoch:2/50 iteration:300/1876 batch loss is :7672.2847
+2025-01-09 14:12:48 - INFO - epoch:2/50 iteration:350/1876 batch loss is :7163.7622
+2025-01-09 14:12:50 - INFO - epoch:2/50 iteration:400/1876 batch loss is :7589.0952
+2025-01-09 14:12:52 - INFO - epoch:2/50 iteration:450/1876 batch loss is :7248.3037
+2025-01-09 14:12:54 - INFO - epoch:2/50 iteration:500/1876 batch loss is :6619.7476
+2025-01-09 14:12:55 - INFO - epoch:2/50 iteration:550/1876 batch loss is :6809.3188
+2025-01-09 14:12:57 - INFO - epoch:2/50 iteration:600/1876 batch loss is :7071.8672
+2025-01-09 14:12:59 - INFO - epoch:2/50 iteration:650/1876 batch loss is :7056.7651
+2025-01-09 14:13:01 - INFO - epoch:2/50 iteration:700/1876 batch loss is :6901.9297
+2025-01-09 14:13:02 - INFO - epoch:2/50 iteration:750/1876 batch loss is :6701.5083
+2025-01-09 14:13:04 - INFO - epoch:2/50 iteration:800/1876 batch loss is :7977.0415
+2025-01-09 14:13:06 - INFO - epoch:2/50 iteration:850/1876 batch loss is :7770.6499
+2025-01-09 14:13:08 - INFO - epoch:2/50 iteration:900/1876 batch loss is :7182.7168
+2025-01-09 14:13:09 - INFO - epoch:2/50 iteration:950/1876 batch loss is :7941.7373
+2025-01-09 14:13:11 - INFO - epoch:2/50 iteration:1000/1876 batch loss is :7561.9214
+2025-01-09 14:13:13 - INFO - epoch:2/50 iteration:1050/1876 batch loss is :7553.5352
+2025-01-09 14:13:14 - INFO - epoch:2/50 iteration:1100/1876 batch loss is :7531.9746
+2025-01-09 14:13:16 - INFO - epoch:2/50 iteration:1150/1876 batch loss is :6666.5933
+2025-01-09 14:13:18 - INFO - epoch:2/50 iteration:1200/1876 batch loss is :6792.8618
+2025-01-09 14:13:20 - INFO - epoch:2/50 iteration:1250/1876 batch loss is :7209.8149
+2025-01-09 14:13:22 - INFO - epoch:2/50 iteration:1300/1876 batch loss is :7654.3311
+2025-01-09 14:13:23 - INFO - epoch:2/50 iteration:1350/1876 batch loss is :7471.9810
+2025-01-09 14:13:25 - INFO - epoch:2/50 iteration:1400/1876 batch loss is :7163.2729
+2025-01-09 14:13:27 - INFO - epoch:2/50 iteration:1450/1876 batch loss is :6955.5142
+2025-01-09 14:13:29 - INFO - epoch:2/50 iteration:1500/1876 batch loss is :6613.7310
+2025-01-09 14:13:30 - INFO - epoch:2/50 iteration:1550/1876 batch loss is :7555.5547
+2025-01-09 14:13:32 - INFO - epoch:2/50 iteration:1600/1876 batch loss is :7897.3003
+2025-01-09 14:13:34 - INFO - epoch:2/50 iteration:1650/1876 batch loss is :7584.1646
+2025-01-09 14:13:36 - INFO - epoch:2/50 iteration:1700/1876 batch loss is :8364.7979
+2025-01-09 14:13:38 - INFO - epoch:2/50 iteration:1750/1876 batch loss is :7261.3228
+2025-01-09 14:13:40 - INFO - epoch:2/50 iteration:1800/1876 batch loss is :7129.1567
+2025-01-09 14:13:41 - INFO - epoch:2/50 iteration:1850/1876 batch loss is :7511.8940
+2025-01-09 14:13:42 - INFO - Epoch:2/50 Loss is :7212.8608
+2025-01-09 14:13:42 - INFO - average reconstruction loss is :7212.8608
+2025-01-09 14:13:42 - INFO - average kl divergence is : 0.0000
+2025-01-09 14:13:45 - INFO - VAL loss :7346.1309
+2025-01-09 14:13:45 - INFO - epoch:3/50 iteration:0/1876 batch loss is :7070.8848
+2025-01-09 14:13:47 - INFO - epoch:3/50 iteration:50/1876 batch loss is :8262.8008
+2025-01-09 14:13:49 - INFO - epoch:3/50 iteration:100/1876 batch loss is :7622.3184
+2025-01-09 14:13:51 - INFO - epoch:3/50 iteration:150/1876 batch loss is :7246.2026
+2025-01-09 14:13:53 - INFO - epoch:3/50 iteration:200/1876 batch loss is :6806.9409
+2025-01-09 14:13:55 - INFO - epoch:3/50 iteration:250/1876 batch loss is :7413.9795
+2025-01-09 14:13:57 - INFO - epoch:3/50 iteration:300/1876 batch loss is :7917.8335
+2025-01-09 14:13:59 - INFO - epoch:3/50 iteration:350/1876 batch loss is :7120.9785
+2025-01-09 14:14:01 - INFO - epoch:3/50 iteration:400/1876 batch loss is :7185.4795
+2025-01-09 14:14:03 - INFO - epoch:3/50 iteration:450/1876 batch loss is :6908.3496
+2025-01-09 14:14:05 - INFO - epoch:3/50 iteration:500/1876 batch loss is :6723.9683
+2025-01-09 14:14:07 - INFO - epoch:3/50 iteration:550/1876 batch loss is :7203.0103
+2025-01-09 14:14:10 - INFO - epoch:3/50 iteration:600/1876 batch loss is :6787.0396
+2025-01-09 14:14:12 - INFO - epoch:3/50 iteration:650/1876 batch loss is :7223.9414
+2025-01-09 14:14:15 - INFO - epoch:3/50 iteration:700/1876 batch loss is :6526.7422
+2025-01-09 14:14:17 - INFO - epoch:3/50 iteration:750/1876 batch loss is :7288.6758
+2025-01-09 14:14:19 - INFO - epoch:3/50 iteration:800/1876 batch loss is :6743.1680
+2025-01-09 14:14:21 - INFO - epoch:3/50 iteration:850/1876 batch loss is :7158.9917
+2025-01-09 14:14:24 - INFO - epoch:3/50 iteration:900/1876 batch loss is :6661.0835
+2025-01-09 14:14:26 - INFO - epoch:3/50 iteration:950/1876 batch loss is :7029.4131
+2025-01-09 14:14:28 - INFO - epoch:3/50 iteration:1000/1876 batch loss is :6796.0820
+2025-01-09 14:14:30 - INFO - epoch:3/50 iteration:1050/1876 batch loss is :8005.2109
+2025-01-09 14:14:32 - INFO - epoch:3/50 iteration:1100/1876 batch loss is :7135.2632
+2025-01-09 14:14:35 - INFO - epoch:3/50 iteration:1150/1876 batch loss is :7410.7441
+2025-01-09 14:14:37 - INFO - epoch:3/50 iteration:1200/1876 batch loss is :7081.5674
+2025-01-09 14:14:39 - INFO - epoch:3/50 iteration:1250/1876 batch loss is :7086.3120
+2025-01-09 14:14:42 - INFO - epoch:3/50 iteration:1300/1876 batch loss is :6981.1216
+2025-01-09 14:14:44 - INFO - epoch:3/50 iteration:1350/1876 batch loss is :7190.8643
+2025-01-09 14:14:46 - INFO - epoch:3/50 iteration:1400/1876 batch loss is :7002.2930
+2025-01-09 14:14:48 - INFO - epoch:3/50 iteration:1450/1876 batch loss is :7148.5776
+2025-01-09 14:14:51 - INFO - epoch:3/50 iteration:1500/1876 batch loss is :6869.7891
+2025-01-09 14:14:53 - INFO - epoch:3/50 iteration:1550/1876 batch loss is :7277.6436
+2025-01-09 14:14:55 - INFO - epoch:3/50 iteration:1600/1876 batch loss is :6842.9976
+2025-01-09 14:14:58 - INFO - epoch:3/50 iteration:1650/1876 batch loss is :7436.4307
+2025-01-09 14:15:00 - INFO - epoch:3/50 iteration:1700/1876 batch loss is :7438.3828
+2025-01-09 14:15:03 - INFO - epoch:3/50 iteration:1750/1876 batch loss is :7515.5273
+2025-01-09 14:15:05 - INFO - epoch:3/50 iteration:1800/1876 batch loss is :7507.1709

@@ -8,13 +8,15 @@ import numpy as np
 
 parser = argparse.ArgumentParser(description="inference arguments")
 
-parser.add_argument('--model_path',type=str,default='/home/akshit/Desktop/workspace/python/MNIST/model_parameter_VAE/5/epoch15_val_485.9570617675781_train_487.7302551269531',help='path of model parameters')
+parser.add_argument('--model_path',type=str,default='model_parameter_VAE/28/epoch28_val_351.43902587890625_train_355.5283203125',help='path of model parameters')
 parser.add_argument('--data_dir',type=str,default='data',help='path of data')
 parser.add_argument('--batch',type=int,default=32,help='batch size')
+parser.add_argument('--latent_dim',type=int,default=64,help='dimensions of z')
 
 args=parser.parse_args()
 
-model=VAE_conv(28,128)
+print(args)
+model=VAE_conv(28,args.latent_dim)
 device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model.load_state_dict(torch.load(args.model_path))
 
@@ -30,6 +32,7 @@ test_loader = torch.utils.data.DataLoader(dataset=test_dataset,
                                         shuffle=False)
 
 with torch.no_grad():
+    flag=0
     for image,label in test_loader:
         image=image.to(device)
         prediction=model(image)
@@ -44,7 +47,10 @@ with torch.no_grad():
 
             k=cv2.waitKey(0)
             if k==ord('q'):
+                flag=1
                 break
+        if flag:
+            break
         
     cv2.destroyAllWindows()
         

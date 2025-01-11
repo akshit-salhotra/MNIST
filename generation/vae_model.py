@@ -82,7 +82,8 @@ class VAE_conv(nn.Module):
         decoder=[]
         for i in range(2):
             decoder.append(nn.Sequential(nn.Conv2d(hidden_ch[-1],hidden_ch[-1],3,padding=1),nn.LeakyReLU()))
-        decoder.append(nn.Sequential(*[VAE_conv.decoder_layer(hidden_ch[i],hidden_ch[i-1]) for i in range(len(hidden_ch)-1,0,-1)]))
+        decoder.append(nn.Sequential(*[VAE_conv.decoder_layer(hidden_ch[i],hidden_ch[i-1]) for i in range(len(hidden_ch)-1,1,-1)]))
+        decoder.append(nn.Sequential(nn.ConvTranspose2d(hidden_ch[1],hidden_ch[0],2,2),nn.Sigmoid()))
         self.decoder=nn.Sequential(*decoder)
               
     @staticmethod
@@ -104,14 +105,13 @@ class VAE_conv(nn.Module):
         
         batch,_,_,_=x.shape
         x=self.encoder(x)
-        # print('the shape is :',x.shape)
         x=x.reshape(batch,-1)
         mu=self.mu(x)
         log_var=self.log_var(x)
         z=VAE_conv.reparametrize(mu,log_var)
         x=self.project_back(z)
         x=x.reshape(batch,self.hidden_ch[-1],self.input_size//(2*self.hidden_layers),self.input_size//(2*self.hidden_layers))
-        x=self.decoder(x)
+        x=self.decoder(x)*255
         
         if return_moments:
             return x,mu,log_var

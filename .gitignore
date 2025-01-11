@@ -2,3 +2,4 @@ model_parameters_ANN
 data
 model_parameter_VAE
 train.log
+train

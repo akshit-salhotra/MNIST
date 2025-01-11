@@ -1,0 +1,73 @@
+2025-01-10 19:38:48 - INFO - ------------------------------------------------------------------------------------------------
+2025-01-10 19:38:48 - INFO - starting new training !!!!
+2025-01-10 19:38:48 - INFO - ------------------------------------------------------------------------------------------------
+2025-01-10 19:38:48 - INFO - Namespace(lr=0.0001, batch=32, epoch=50, data_dir='/home/akshit/Desktop/workspace/python/MNIST/data', save_dir='model_parameter_VAE', kl_weight=0.0, save_freq=2, log_dir='logs', gamma=0.1, step_size=2, model_path=None, latent_dim=64)
+2025-01-10 19:38:48 - INFO - parameters are being saved at :model_parameter_VAE/27
+2025-01-10 19:38:48 - INFO - VAE_conv(
+  (encoder): Sequential(
+    (0): Sequential(
+      (0): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+      (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (1): Sequential(
+      (0): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+      (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (2): Sequential(
+      (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+    )
+    (3): Sequential(
+      (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+    )
+  )
+  (mu): Linear(in_features=3136, out_features=64, bias=True)
+  (log_var): Linear(in_features=3136, out_features=64, bias=True)
+  (project_back): Linear(in_features=64, out_features=3136, bias=True)
+  (decoder): Sequential(
+    (0): Sequential(
+      (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+    )
+    (1): Sequential(
+      (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(negative_slope=0.01)
+    )
+    (2): Sequential(
+      (0): Sequential(
+        (0): ConvTranspose2d(64, 32, kernel_size=(2, 2), stride=(2, 2))
+        (1): LeakyReLU(negative_slope=0.01)
+      )
+    )
+    (3): Sequential(
+      (0): ConvTranspose2d(32, 1, kernel_size=(2, 2), stride=(2, 2))
+      (1): Sigmoid()
+    )
+  )
+)
+2025-01-10 19:38:49 - INFO - epoch:0/50 iteration:0/1876 batch loss is :15512.6943
+2025-01-10 19:38:52 - INFO - epoch:0/50 iteration:50/1876 batch loss is :5233.7910
+2025-01-10 19:38:55 - INFO - epoch:0/50 iteration:100/1876 batch loss is :4846.8911
+2025-01-10 19:38:58 - INFO - epoch:0/50 iteration:150/1876 batch loss is :3625.3306
+2025-01-10 19:39:02 - INFO - epoch:0/50 iteration:200/1876 batch loss is :2907.9866
+2025-01-10 19:39:05 - INFO - epoch:0/50 iteration:250/1876 batch loss is :2313.1907
+2025-01-10 19:39:08 - INFO - epoch:0/50 iteration:300/1876 batch loss is :1977.7783
+2025-01-10 19:39:11 - INFO - epoch:0/50 iteration:350/1876 batch loss is :1817.3405
+2025-01-10 19:39:14 - INFO - epoch:0/50 iteration:400/1876 batch loss is :1693.8009
+2025-01-10 19:39:17 - INFO - epoch:0/50 iteration:450/1876 batch loss is :1472.2816
+2025-01-10 19:39:20 - INFO - epoch:0/50 iteration:500/1876 batch loss is :1605.2969
+2025-01-10 19:39:22 - INFO - epoch:0/50 iteration:550/1876 batch loss is :1407.3433
+2025-01-10 19:39:25 - INFO - epoch:0/50 iteration:600/1876 batch loss is :1313.8213
+2025-01-10 19:39:29 - INFO - epoch:0/50 iteration:650/1876 batch loss is :1098.4675
+2025-01-10 19:39:34 - INFO - epoch:0/50 iteration:700/1876 batch loss is :1194.6671
+2025-01-10 19:39:39 - INFO - epoch:0/50 iteration:750/1876 batch loss is :1084.9877
+2025-01-10 19:39:44 - INFO - epoch:0/50 iteration:800/1876 batch loss is :898.3693
+2025-01-10 19:39:49 - INFO - epoch:0/50 iteration:850/1876 batch loss is :1058.2678
+2025-01-10 19:39:55 - INFO - epoch:0/50 iteration:900/1876 batch loss is :1049.5662
+2025-01-10 19:40:00 - INFO - epoch:0/50 iteration:950/1876 batch loss is :852.9761
+2025-01-10 19:40:05 - INFO - epoch:0/50 iteration:1000/1876 batch loss is :874.7682
+2025-01-10 19:40:10 - INFO - epoch:0/50 iteration:1050/1876 batch loss is :801.8284
+2025-01-10 19:40:15 - INFO - epoch:0/50 iteration:1100/1876 batch loss is :825.3283

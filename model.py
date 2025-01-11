@@ -13,6 +13,11 @@ class ANN(nn.Module):
         self.Relu=nn.ReLU()
     
     def forward(self,x):
+        x=self.embedding(x)
+        x=self.Relu(self.final(x))
+        return x
+    
+    def embedding(self,x):
         x=x.reshape(-1,28**2)
         # print(x.shape)
         x=self.Relu(self.layer1(x))
@@ -21,8 +26,8 @@ class ANN(nn.Module):
         x=self.Relu(self.layer4(x))
         x=self.Relu(self.layer5(x))
         x=self.Relu(self.layer6(x))
-        x=self.Relu(self.final(x))
         return x
+        
 
 if __name__=='__main__':
     from torchsummary import summary
