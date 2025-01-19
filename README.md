@@ -52,22 +52,18 @@ This repository is meant to improve my understanding of deep learning. It contai
    cd MNIST
    ```
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
 
-3. Train a model:
+2. Train a model:
    ```bash
    python train.py
    ```
 
-4. Generate t-SNE plots:
+3. Generate t-SNE plots:
    ```bash
    python t_SNE.py
    ```
 
-5. Evaluate the model:
+4. Evaluate the model:
    ```bash
    python evaluation.py
    ```
