@@ -45,11 +45,11 @@ for i,label in zip(X_embedded,labels):
     data_dict[label.item()].append(list(i))
 colors = ['red', 'blue', 'green', 'yellow', 'orange', 'purple', 'cyan', 'magenta', 'black', 'brown']
 for i in range(10):
-    print(data_dict[i])
+    # print(data_dict[i])
     arr=np.array(data_dict[i])
     # print(len(data_dict[i]))
     plt.scatter(arr[:,0],arr[:,1],c=colors[i])
-    
+plt.savefig('t-SNE.png')    
 plt.show()
 
         

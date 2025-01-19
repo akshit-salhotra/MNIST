@@ -8,10 +8,10 @@ import numpy as np
 
 parser = argparse.ArgumentParser(description="inference arguments")
 
-parser.add_argument('--model_path',type=str,default='model_parameter_VAE/28/epoch28_val_351.43902587890625_train_355.5283203125',help='path of model parameters')
+parser.add_argument('--model_path',type=str,default='model_parameter_VAE/30/epoch12_val_344.32470703125_train_346.8779602050781',help='path of model parameters')
 parser.add_argument('--data_dir',type=str,default='data',help='path of data')
 parser.add_argument('--batch',type=int,default=32,help='batch size')
-parser.add_argument('--latent_dim',type=int,default=64,help='dimensions of z')
+parser.add_argument('--latent_dim',type=int,default=128,help='dimensions of z')
 
 args=parser.parse_args()
 
