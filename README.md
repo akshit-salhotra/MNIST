@@ -40,7 +40,11 @@ This repository is meant to improve my understanding of deep learning. It contai
 ### t-SNE Plot: Classfier
 ![t-SNE Plot](t-SNE.png)
 
+---
+## Generation Results
 
+### Handwritten digit generation using flow matching
+![generations at different guidance scales](guidance-free_classifier.png)
 
 ---
 
