@@ -32,7 +32,7 @@ if os.path.exists(args.save_dir):
     num_folder=str(int(sorted(os.listdir(args.save_dir),key=lambda x:int(x))[-1])+1)
 else:
     os.makedirs(args.save_dir,exist_ok=False)
-    num_folder=0
+    num_folder='0'
 save_path=args.save_dir+os.sep+num_folder
 
 os.makedirs(args.log_dir,exist_ok=True)

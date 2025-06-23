@@ -3,3 +3,4 @@ data
 model_parameter_VAE
 train.log
 train
+logs
